@@ -5,6 +5,7 @@ const source_of_truth = {
   map_is_clickable : true,
   area_is_custom : false,
   data_available : false,
+  initialized: false,
   ventura : false
 }
 
@@ -16,8 +17,8 @@ new Vue({
       if (this.turf_area == '') {
         return '';
       }
-      if (this.turf_area == 'No Data') {
-        return 'No Data';
+      if (this.turf_area == 'No turf area data') {
+        return 'No turf area data';
       }
 
       return  `${Math.round(this.turf_area).toLocaleString()} sqft`

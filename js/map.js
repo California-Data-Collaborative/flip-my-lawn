@@ -27,7 +27,7 @@ function selectParcel(lat, lng, instance) {
         instance.turf_area = record.turf_area_sf_cgu
       } else {
         instance.ventura = true
-        instance.turf_area = 'No Data'
+        instance.turf_area = 'No turf area data'
       }
 
     } else {
@@ -35,6 +35,10 @@ function selectParcel(lat, lng, instance) {
       instance.turf_area = ''
       instance.pet = ''
       instance.home_address = ''
+    }
+
+    if (!instance.initialized){
+      instance.initialized = true
     }
 
   })
@@ -112,7 +116,9 @@ function initializeDrawTool(instance) {
   instance.$options.editableLayers = new L.FeatureGroup();
   instance.$options.map.addLayer(instance.$options.editableLayers);
 
-  L.drawLocal.draw.toolbar.buttons.polygon = 'Draw polygons over the parts of your lawn you would like to convert';
+  // L.drawLocal.EditToolbar.Edit.disable()
+
+  L.drawLocal.draw.toolbar.buttons.polygon = 'Draw polygons around the parts of your lawn you would like to convert';
   L.drawLocal.draw.handlers.polygon.tooltip.start = 'Click to start drawing your polygon around the part of your lawn you would like to convert';
   L.drawLocal.draw.handlers.polygon.tooltip.cont = 'Click to continue drawing your polygon';
   L.drawLocal.draw.handlers.polygon.tooltip.end = 'When you\'re ready, click the first point to finish and calculate estimates';
