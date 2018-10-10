@@ -52,7 +52,7 @@ function selectParcel(lat, lng, instance) {
           scrollWheelZoom:false,
           zoomControl: true,
           // maxZoom: 18,
-          minZoom: 15
+          // minZoom: 10
         });
 
         // Pull basemap

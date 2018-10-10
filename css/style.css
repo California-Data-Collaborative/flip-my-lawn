@@ -1,6 +1,5 @@
 
 .anchor {
-  background-color: white;
   display: block;
   height: 56px;
 }
@@ -21,7 +20,7 @@
 }
 
 #what_is_flip_my_lawn {
-  font-size: 20px;
+  /* font-size: 20px; */
 }
 
 #map {
