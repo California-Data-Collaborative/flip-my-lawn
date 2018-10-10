@@ -101,190 +101,190 @@
 
         <label for="search-addon">
           <!-- <b> -->
-            Home Address
+          Home Address
           <!-- </b> -->
         </label>
         <div class="input-group input-group-sm mb-3">
           <!-- <div class="input-group-prepend"> -->
-            <!-- <span class="input-group-text" id="search-addon"> -->
-              <!-- <b>Home Address</b> -->
-              <!-- <i class="fas fa-search-location"></i> -->
-            <!-- </span> -->
+          <!-- <span class="input-group-text" id="search-addon"> -->
+          <!-- <b>Home Address</b> -->
+          <!-- <i class="fas fa-search-location"></i> -->
+          <!-- </span> -->
           <!-- </div> -->
           <input v-model='home_address' type="text" ref='autocomplete3' class="form-control" placeholder="Enter your home address" aria-label="Enter your home address">
           <!-- <div class="input-group-append">
-            <button v-scroll-to="'#savings_explorer_anchor'" class="btn btn-secondary" type="button" id="button-addon">See Estimates</button>
-          </div> -->
-        </div>
+          <button v-scroll-to="'#savings_explorer_anchor'" class="btn btn-secondary" type="button" id="button-addon">See Estimates</button>
+        </div> -->
+      </div>
 
-        <label for="leaf-addon-addon">
-          <!-- <b> -->
-            Turf Area For Conversion
-          <!-- </b> -->
-        </label>
-        <div class="input-group input-group-sm mb-3">
-          <!-- <div class="input-group-prepend"> -->
-            <!-- <span class="input-group-text" id="leaf-addon"> -->
-              <!-- <i class="fas fa-leaf"></i> -->
-              <!-- <b>Turf Area For Conversion</b> -->
-            <!-- </span> -->
-          <!-- </div> -->
-          <input v-model='turf_area_for_display' type="text" class="form-control" placeholder="Enter an address above, or click a yard on the map" aria-label="Enter an address above, or click a yard on the map" aria-describedby="button-addon" disabled>
-          <div v-if="data_available" class="input-group-append">
-            <button class="btn btn-success" type="button" id="button-addon" data-toggle="modal" data-target="#instruction_modal">Edit</button>
-          </div>
+      <label for="leaf-addon-addon">
+        <!-- <b> -->
+        Turf Area For Conversion
+        <!-- </b> -->
+      </label>
+      <div class="input-group input-group-sm mb-3">
+        <!-- <div class="input-group-prepend"> -->
+        <!-- <span class="input-group-text" id="leaf-addon"> -->
+        <!-- <i class="fas fa-leaf"></i> -->
+        <!-- <b>Turf Area For Conversion</b> -->
+        <!-- </span> -->
+        <!-- </div> -->
+        <input v-model='turf_area_for_display' type="text" class="form-control" placeholder="Enter an address above, or click a yard on the map" aria-label="Enter an address above, or click a yard on the map" aria-describedby="button-addon" disabled>
+        <div v-if="data_available" class="input-group-append">
+          <button class="btn btn-success" type="button" id="button-addon" data-toggle="modal" data-target="#instruction_modal">Edit</button>
         </div>
-        <!-- Modal -->
-        <div class="modal fade" id="instruction_modal" tabindex="-1" role="dialog" aria-labelledby="instruction_modal_title" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="instruction_modal_title">Draw polygons around the parts of your lawn you would like to convert</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <ol class="">
-                  <li class="mb-3 mr-3">Click the &nbsp<svg class='polygon' style="background-image: url(assets/polygon.svg);"></svg>&nbsp on the map to start drawing</li>
-                  <li class="mb-3 mr-3">Follow the popup prompts to continue and complete the drawing</li>
-                  <li class="mb-3 mr-3">Click the &nbsp<svg class='polygon' style="background-image: url(assets/polygon.svg);"></svg>&nbsp again to draw additional polygons</li>
-                  <li class="mb-3 mr-3">Click anywhere outside of your drawing to reset to the default estimates</li>
-                </ol>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-success" data-dismiss="modal">Got it.</button>
-              </div>
+      </div>
+      <!-- Modal -->
+      <div class="modal fade" id="instruction_modal" tabindex="-1" role="dialog" aria-labelledby="instruction_modal_title" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="instruction_modal_title">Draw polygons around the parts of your lawn you would like to convert</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <ol class="">
+                <li class="mb-3 mr-3">Click the &nbsp<svg class='polygon' style="background-image: url(assets/polygon.svg);"></svg>&nbsp on the map to start drawing</li>
+                <li class="mb-3 mr-3">Follow the popup prompts to continue and complete the drawing</li>
+                <li class="mb-3 mr-3">Click the &nbsp<svg class='polygon' style="background-image: url(assets/polygon.svg);"></svg>&nbsp again to draw additional polygons</li>
+                <li class="mb-3 mr-3">Click anywhere outside of your drawing to reset to the default estimates</li>
+              </ol>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-success" data-dismiss="modal">Got it.</button>
             </div>
           </div>
         </div>
-        <div class="bounce" v-bind:class="{'text-center':!data_available, 'd-none':data_available&&turf_area!=='No turf area data', 'float-right':ventura&&data_available}">
-          <h1><i class="fas fa-arrow-up"></i></h1>
+      </div>
+      <div class="bounce" v-bind:class="{'text-center':!data_available, 'd-none':data_available&&turf_area!=='No turf area data', 'float-right':ventura&&data_available}">
+        <h1><i class="fas fa-arrow-up"></i></h1>
+      </div>
+      <div class="text-center" v-bind:class="{'d-none': data_available||!initialized }">
+        <h5>No data for this yard...</h5>
+      </div>
+      <div v-if="data_available && turf_area!=='No turf area data'" class="d-none d-lg-block">
+        <p>
+          <h4>{{water_savings_for_display}}k gallons of water saved per year</h4>
+          <i>Based on estimates of current turf area for conversion and local environmental conditions</i>
+        </p>
+        <p>
+          <h4>${{dollar_savings_for_display}} in savings over 20 years</h4>
+          <i>Based on cost estimates of water, installation (considering rebates), and yard maintenance</i>
+        </p>
+        <hr>
+        <h5 class='text-center mb-3'>Broader Environmental Impact</h5>
+        <div class="row text-center align-items-center">
+
+
+          <div class="col-md-5">
+            <h6>Potential pounds of carbon saved per year</h6>
+            <p>{{carbon_savings_for_display}}</p>
+          </div>
+          <div class="col-md-2">
+            =
+          </div>
+          <div class="col-md-5">
+            <h6>Tree seedlings grown for 10 years per year</h6>
+            <p>{{trees_grown_for_display}}</p>
+          </div>
+
         </div>
-        <div class="text-center" v-bind:class="{'d-none': data_available||!initialized }">
-          <h5>No data for this yard...</h5>
+        <div class="mx-auto text-center text-success mt-3 mb-4">
+          Ready to flip your lawn?
+          <br>
+          <br>
+          <a class="btn btn-primary" target="_blank" href="https://www.qwel.net/map" role="button">Let's Find a Landscaper</a>
         </div>
-        <div v-if="data_available && turf_area!=='No turf area data'" class="d-none d-lg-block">
-          <p>
-            <h4>{{water_savings_for_display}}k gallons of water saved per year</h4>
-            <i>Based on estimates of current turf area for conversion and local environmental conditions</i>
-          </p>
-          <p>
-            <h4>${{dollar_savings_for_display}} in savings over 20 years</h4>
-            <i>Based on cost estimates of water, installation (considering rebates), and yard maintenance</i>
-          </p>
-          <hr>
-          <h5 class='text-center mb-3'>Broader Environmental Impact</h5>
-          <div class="row text-center align-items-center">
+      </div>
+    </div>
+
+    <div class="col-md-12 col-lg-6 px-0">
+      <div id="map" class="fill-screen"></div>
+    </div>
+
+    <div v-if="data_available && turf_area!=='No turf area data'" class="d-lg-none col-md-12">
+      <p>
+        <h4>{{water_savings_for_display}}k gallons of water saved per year</h4>
+        <i>Based on estimates of current turf area for conversion and local environmental conditions</i>
+      </p>
+      <p>
+        <h4>${{dollar_savings_for_display}} in savings over 20 years</h4>
+        <i>Based on cost estimates of water, installation (considering rebates), and yard maintenance</i>
+      </p>
+      <hr>
+      <h5 class='text-center mb-3'>Broader Environmental Impact</h5>
+      <div class="row text-center align-items-center">
 
 
-            <div class="col-md-5">
-              <h6>Potential pounds of carbon saved per year</h6>
-                <p>{{carbon_savings_for_display}}</p>
-              </div>
-              <div class="col-md-2">
-                =
-              </div>
-              <div class="col-md-5">
-                <h6>Tree seedlings grown for 10 years per year</h6>
-                  <p>{{trees_grown_for_display}}</p>
-                </div>
+        <div class="col-md-5">
+          <h6>Potential pounds of carbon saved per year</h6>
+          <p>{{carbon_savings_for_display}}</p>
+        </div>
+        <div class="col-md-2">
+          =
+        </div>
+        <div class="col-md-5">
+          <h6>Tree seedlings grown for 10 years per year</h6>
+          <p>{{trees_grown_for_display}}</p>
+        </div>
 
-              </div>
-              <div class="mx-auto text-center text-success mt-3 mb-4">
-                Ready to flip your lawn?
-                <br>
-                <br>
-                <a class="btn btn-primary" target="_blank" href="https://www.qwel.net/map" role="button">Let's Find a Landscaper</a>
-              </div>
-            </div>
-          </div>
+      </div>
+      <div class="mx-auto text-center text-success mt-3 mb-4">
+        Ready to flip your lawn?
+        <br>
+        <br>
+        <a class="btn btn-primary" target="_blank" href="https://www.qwel.net/map" role="button">Let's Find a Landscaper</a>
+      </div>
+    </div>
+  </section>
 
-          <div class="col-md-12 col-lg-6 px-0">
-            <div id="map" class="fill-screen"></div>
-          </div>
-
-          <div v-if="data_available && turf_area!=='No turf area data'" class="d-lg-none col-md-12">
-            <p>
-              <h4>{{water_savings_for_display}}k gallons of water saved per year</h4>
-              <i>Based on estimates of current turf area for conversion and local environmental conditions</i>
-            </p>
-            <p>
-              <h4>${{dollar_savings_for_display}} in savings over 20 years</h4>
-              <i>Based on cost estimates of water, installation (considering rebates), and yard maintenance</i>
-            </p>
-            <hr>
-            <h5 class='text-center mb-3'>Broader Environmental Impact</h5>
-            <div class="row text-center align-items-center">
-
-
-              <div class="col-md-5">
-                <h6>Potential pounds of carbon saved per year</h6>
-                  <p>{{carbon_savings_for_display}}</p>
-                </div>
-                <div class="col-md-2">
-                  =
-                </div>
-                <div class="col-md-5">
-                  <h6>Tree seedlings grown for 10 years per year</h6>
-                    <p>{{trees_grown_for_display}}</p>
-                  </div>
-
-                </div>
-                <div class="mx-auto text-center text-success mt-3 mb-4">
-                  Ready to flip your lawn?
-                  <br>
-                  <br>
-                  <a class="btn btn-primary" target="_blank" href="https://www.qwel.net/map" role="button">Let's Find a Landscaper</a>
-                </div>
-              </div>
-            </section>
-
-            <div id="native_plant_primer_anchor" class="anchor row"></div>
-            <section id="native_plant_primer" class="bg-white row py-3">
-              <div class="col-lg-12">
-                <h1>Benefits Of California Native Plants</h1>
-                <h4>California native gardens are sustainable, save water, and provide habitat for pollinators</h4>
-                <h3>Save Water</h3>
-                <p>Once established, many California native plants need minimal irrigation beyond normal rainfall.  Saving water conserves a vital, limited resource and saves money, too!</p>
-                <h3>Lower Maintenance</h3>
-                <p>While no landscape is maintenance free, California native plants require significantly less time and resources than common non-native garden plants.  California native plants do best with some attention and care in a garden setting, but you can look forward to using less water, little to no fertilizer, little to no pesticides, less pruning, and less of your time.</p>
-                <h3>Pesticide Freedom</h3>
-                <p>Native plants have developed their own defenses against many pests and diseases.  Since most pesticides kill indiscriminately, beneficial insects become secondary targets in the fight against pests.  Reducing or eliminating pesticide use lets natural pest control take over and keeps garden toxins out of our creeks and watersheds.</p>
-                <h3>Wildlife Viewing</h3>
-                <p>Native plants, hummingbirds, butterflies, and other beneficial insects are “made for each other.”  Research shows that native wildlife clearly prefers native plants.  California’s wealth of insect pollinators can improve fruit set in your garden, while a variety of native insects and birds will help keep your landscape free of mosquitoes and plant-eating bugs.</p>
-                <h3>Support Local Ecology</h3>
-                <p>As development replaces natural habitats, planting gardens, parks, and roadsides with California native plants can help provide an important “bridge” to nearby remaining wildlands.  Recommend native plants to homeowner associations, neighbors, and civic departments. Get involved in your community and with local land-use planning processes to help preserve our California native plants and wildlife.</p>
-                <i>Reference: <a href="https://www.cnps.org/gardening/why-natives/benefits-of-california-native-plants">California Native Plant Society</a></i>
-              </div>
-            </section>
-          </div>
+  <div id="native_plant_primer_anchor" class="anchor row"></div>
+  <section id="native_plant_primer" class="bg-white row py-3">
+    <div class="col-lg-12">
+      <h1>Benefits Of California Native Plants</h1>
+      <h4>California native gardens are sustainable, save water, and provide habitat for pollinators</h4>
+      <h3>Save Water</h3>
+      <p>Once established, many California native plants need minimal irrigation beyond normal rainfall.  Saving water conserves a vital, limited resource and saves money, too!</p>
+      <h3>Lower Maintenance</h3>
+      <p>While no landscape is maintenance free, California native plants require significantly less time and resources than common non-native garden plants.  California native plants do best with some attention and care in a garden setting, but you can look forward to using less water, little to no fertilizer, little to no pesticides, less pruning, and less of your time.</p>
+      <h3>Pesticide Freedom</h3>
+      <p>Native plants have developed their own defenses against many pests and diseases.  Since most pesticides kill indiscriminately, beneficial insects become secondary targets in the fight against pests.  Reducing or eliminating pesticide use lets natural pest control take over and keeps garden toxins out of our creeks and watersheds.</p>
+      <h3>Wildlife Viewing</h3>
+      <p>Native plants, hummingbirds, butterflies, and other beneficial insects are “made for each other.”  Research shows that native wildlife clearly prefers native plants.  California’s wealth of insect pollinators can improve fruit set in your garden, while a variety of native insects and birds will help keep your landscape free of mosquitoes and plant-eating bugs.</p>
+      <h3>Support Local Ecology</h3>
+      <p>As development replaces natural habitats, planting gardens, parks, and roadsides with California native plants can help provide an important “bridge” to nearby remaining wildlands.  Recommend native plants to homeowner associations, neighbors, and civic departments. Get involved in your community and with local land-use planning processes to help preserve our California native plants and wildlife.</p>
+      <i>Reference: <a href="https://www.cnps.org/gardening/why-natives/benefits-of-california-native-plants">California Native Plant Society</a></i>
+    </div>
+  </section>
+</div>
 
 
-          <!-- Include google places -->
-            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeUK3Kp8QZGokPq2B-CQ_PDG1kNbbhIQw&libraries=places"
+<!-- Include google places -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeUK3Kp8QZGokPq2B-CQ_PDG1kNbbhIQw&libraries=places"
 async defer></script>
-          <!-- Include Leaflet -->
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.js"></script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.3/leaflet.draw.js"></script>
-          <!-- Include CARTO.js -->
-          <script src="https://cartodb-libs.global.ssl.fastly.net/carto.js/v4.1.5/carto.min.js"></script>
-          <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-          <script src="https://code.jquery.com/jquery-3.3.1.min.js"  crossorigin="anonymous"></script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<!-- Include Leaflet -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.3/leaflet.draw.js"></script>
+<!-- Include CARTO.js -->
+<script src="https://cartodb-libs.global.ssl.fastly.net/carto.js/v4.1.5/carto.min.js"></script>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-          <!-- development version, includes helpful console warnings -->
-          <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
-          <!-- production version, optimized for size and speed -->
-          <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<!-- development version, includes helpful console warnings -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+<!-- production version, optimized for size and speed -->
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
 
-          <script src="https://cdn.jsdelivr.net/npm/vue-scrollto"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue-scrollto"></script>
 
 
-          <!-- custom JavaScript -->
-          <script type="text/javascript" src="js/search.js"></script>
-          <script type="text/javascript" src="js/map.js"></script>
-          <script type="text/javascript" src="js/script.js"></script>
-        </body>
-        </html>
+<!-- custom JavaScript -->
+<script type="text/javascript" src="js/search.js"></script>
+<script type="text/javascript" src="js/map.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
