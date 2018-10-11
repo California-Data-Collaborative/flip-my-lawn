@@ -34,7 +34,7 @@ function selectParcel(lat, lng, instance) {
             instance.data_available = false
             instance.turf_area = ''
             instance.pet = ''
-            instance.home_address = ''
+            instance.home_address = 'No data for this yard...'
           }
 
           if (!instance.initialized){
@@ -50,13 +50,13 @@ function selectParcel(lat, lng, instance) {
           center: [34.0764536, -118.4300],
           zoom: 17,
           scrollWheelZoom:false,
-          zoomControl: true,
+          zoomControl: true
           // maxZoom: 18,
           // minZoom: 10
         });
 
         // Pull basemap
-        L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
+        L.tileLayer('https://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
           maxZoom: 23,
           subdomains:['mt0','mt1','mt2','mt3'],
           // attribution: 'Powered by <a href="http://www.argolabs.org/">ARGO</a> | Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
