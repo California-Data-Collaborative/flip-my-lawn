@@ -1,2 +1,7 @@
+node_modules/
+package.json
 .hushlogin
-assets/.DS_Store
+.DS_Store
+*/.DS_Store
+js_dev/*
+
