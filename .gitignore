@@ -3,5 +3,4 @@ package.json
 .hushlogin
 .DS_Store
 */.DS_Store
-js_dev/*
-
+js_dev/
