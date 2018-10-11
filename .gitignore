@@ -1,2 +1,4 @@
 .hushlogin
-assets/.DS_Store
+.DS_Store
+*/.DS_Store
+js_dev/*
