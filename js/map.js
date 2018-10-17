@@ -131,6 +131,7 @@ function initializeDrawTool(instance) {
   });
   instance.$options.map.on('draw:created', function (e) {
     if (!instance.data_available) {
+      $('#not_so_fast_modal').modal('show');
       return;
     }
 

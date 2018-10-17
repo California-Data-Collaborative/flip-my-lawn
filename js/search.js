@@ -3,7 +3,6 @@ function addPlaceListener(instance, ref) {
     var place = instance[ref].getPlace();
     var lat = place.geometry.location.lat();
     var lng = place.geometry.location.lng();
-    instance.home_address = place.formatted_address;
     selectParcel(lat, lng, instance);
   });
 }

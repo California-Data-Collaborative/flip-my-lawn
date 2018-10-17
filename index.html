@@ -251,6 +251,24 @@
 
     <div class="col-md-12 col-lg-6 px-0">
       <div id="map" class="fill-screen"></div>
+      <div class="modal fade" id="not_so_fast_modal" tabindex="-1" role="dialog" aria-labelledby="instruction_modal_title" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="not_so_fast_modal_title">Hey, not so fast!</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              Please search for an address or click a yard on the map first.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-success" data-dismiss="modal">Got it.</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div v-if="data_available && turf_area!=='No turf area data'" class="d-lg-none col-md-12">
@@ -290,11 +308,11 @@
   </section>
 
   <div id="native_plant_primer_anchor" class="anchor row bg-white"></div>
-  <section id="native_plant_primer" class="row py-3 bg-white fill-screen">
+  <section id="native_plant_primer" class="row py-3 bg-white">
     <div class="col-lg-12">
       <div class="row justify-content-center my-4">
         <div class="col-lg-11">
-          <h1>Benefits Of California Native Plants</h1>
+          <h1>Benefits of California Native Plants</h1>
           <h4>California native gardens are sustainable, save water, and provide habitat for pollinators</h4>
           <div class="card-deck mt-4">
             <div class="card border-0">
@@ -358,8 +376,11 @@ async defer></script>
 
 
 <!-- custom JavaScript -->
-<script type="text/javascript" src="js/search.js"></script>
+<!-- <script type="text/javascript" src="js/search.js"></script>
 <script type="text/javascript" src="js/map.js"></script>
-<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/script.js"></script> -->
+<script type="text/javascript" src="js_dev/search.js"></script>
+<script type="text/javascript" src="js_dev/map.js"></script>
+<script type="text/javascript" src="js_dev/script.js"></script>
 </body>
 </html>
