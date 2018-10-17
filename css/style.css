@@ -1,10 +1,13 @@
+/* .card-columns {
+    column-count: 2;
+} */
 
 .anchor {
   display: block;
   height: 56px;
 }
 .fill-screen{
-  height: calc(100vh - 56px);
+  min-height: calc(100vh - 56px);
 }
 
 .polygon{
