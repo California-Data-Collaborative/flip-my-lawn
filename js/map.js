@@ -1,18 +1,30 @@
+"use strict";
+
 function selectParcel(lat, lng, instance) {
   var latlng = {
     lat: lat,
     lng: lng
   };
-  query = "\n  SELECT *\n  FROM ca_parcels_with_turf_data\n  WHERE\n  ST_Within(\n    ST_Transform(\n      ST_SetSRID(\n        ST_MakePoint(".concat(lng, ", ").concat(lat, "),\n        4326),\n        4326),\n        the_geom)\n        ");
+  var query = "\n  SELECT *\n  FROM ca_parcels_with_turf_data\n  WHERE\n  ST_Within(\n    ST_Transform(\n      ST_SetSRID(\n        ST_MakePoint(".concat(lng, ", ").concat(lat, "),\n        4326),\n        4326),\n        the_geom)\n        ");
   instance.$options.selectedParcelSource.setQuery(query);
   instance.$options.map.panTo(latlng);
-  encoded_query = encodeURIComponent(query);
-  url = "https://california-data-collaborative.carto.com/api/v2/sql?q=".concat(encoded_query);
+  var encoded_query = encodeURIComponent(query);
+  var url = "https://california-data-collaborative.carto.com/api/v2/sql?q=".concat(encoded_query);
   $.getJSON(url, function (data) {
-    record = data.rows[0];
+    var record = data.rows[0];
 
     if (record) {
-      instance.data_available = true;
+      instance.data_available = true; // update home_address with google geocoder
+      // let latlng = {lat: lat, lng: lng};
+
+      var geocoder = new google.maps.Geocoder();
+      geocoder.geocode({
+        'location': latlng
+      }, function (results, status) {
+        if (instance.data_available) {
+          instance.home_address = results[0].formatted_address;
+        }
+      });
       instance.pet = record.pet_spatial_cimis;
 
       if (record.county != 'Ventura') {
@@ -65,23 +77,10 @@ function initializeMap(instance) {
     if (instance.map_is_clickable) {
       instance.$options.editableLayers.clearLayers(instance.$options.drawLayer);
       instance.area_is_custom = false;
-      var _lat = e.latlng.lat;
-      var _lng = e.latlng.lng; // update map and get area data from carto
+      var lat = e.latlng.lat;
+      var lng = e.latlng.lng; // update map and get area data from carto
 
-      selectParcel(_lat, _lng, instance); // update home_address with google geocoder
-
-      var latlng = {
-        lat: _lat,
-        lng: _lng
-      };
-      geocoder = new google.maps.Geocoder();
-      geocoder.geocode({
-        'location': latlng
-      }, function (results, status) {
-        if (instance.data_available) {
-          instance.home_address = results[0].formatted_address;
-        }
-      });
+      selectParcel(lat, lng, instance);
     }
   });
 }
@@ -145,9 +144,9 @@ function initializeDrawTool(instance) {
     }
 
     instance.turf_area += custom_area;
-    lat = instance.$options.drawLayer.getBounds().getCenter().lat;
-    lng = instance.$options.drawLayer.getBounds().getCenter().lng;
-    custom_area_for_display = "".concat(Math.round(custom_area).toLocaleString(), " sqft");
+    var lat = instance.$options.drawLayer.getBounds().getCenter().lat;
+    var lng = instance.$options.drawLayer.getBounds().getCenter().lng;
+    var custom_area_for_display = "".concat(Math.round(custom_area).toLocaleString(), " sqft");
     instance.$options.drawLayer.bindPopup(custom_area_for_display);
     instance.$options.drawLayer.openPopup([lat, lng]);
   });

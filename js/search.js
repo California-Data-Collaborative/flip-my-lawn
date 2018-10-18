@@ -1,3 +1,5 @@
+"use strict";
+
 function addPlaceListener(instance, ref) {
   instance[ref].addListener('place_changed', function () {
     var place = instance[ref].getPlace();
