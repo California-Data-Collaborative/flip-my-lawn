@@ -13,6 +13,16 @@ var source_of_truth = {
 new Vue({
   el: '#app',
   data: source_of_truth,
+  watch: {
+    home_address: function home_address() {
+      if (this.home_address == 'No data for this yard...') {
+        document.getElementById('savings_explorer_anchor').scrollIntoView({
+          behavior: 'smooth',
+          block: "start"
+        });
+      }
+    }
+  },
   computed: {
     turf_area_for_display: function turf_area_for_display() {
       if (this.turf_area == '') {
