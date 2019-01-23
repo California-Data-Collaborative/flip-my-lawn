@@ -3,6 +3,7 @@
 var source_of_truth = {
   turf_area: '',
   home_address: '',
+  customCalscapeUrl: 'https://calscape.org/loc-/?&poploc=1',
   pet: '',
   map_is_clickable: true,
   area_is_custom: false,
