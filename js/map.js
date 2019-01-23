@@ -22,7 +22,11 @@ function selectParcel(lat, lng, instance) {
         'location': latlng
       }, function (results, status) {
         if (instance.data_available) {
-          instance.home_address = results[0].formatted_address;
+          instance.home_address = results[0].formatted_address; // customCalscapeUrl update
+
+          var _url = "https://calscape.org/loc-".concat(lat, ",").concat(lng, "(").concat(instance.home_address, ")/?&poploc=1");
+
+          instance.customCalscapeUrl = _url;
         }
       });
       instance.pet = record.pet_spatial_cimis;
