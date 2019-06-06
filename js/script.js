@@ -4,7 +4,7 @@ var source_of_truth = {
   turf_area: '',
   home_address: '',
   customCalscapeUrl: 'https://calscape.org/loc-/?&poploc=1',
-  customrebateUrl: 'https://www.google.com/search?q=water+efficency+rebate+programs&oq=water+efficency+rebate+programs&aqs=chrome..69i57.6904j0j7&sourceid=chrome&ie=UTF-8',
+  customrebateUrl: 'https://www.google.com/search?q=water+efficiency+rebate+programs+near+me',
   pet: '',
   map_is_clickable: true,
   area_is_custom: false,
