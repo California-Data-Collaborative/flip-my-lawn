@@ -22,6 +22,9 @@ function selectParcel(lat, lng, instance) {
         'location': latlng
       }, function (results, status) {
         if (instance.data_available) {
+          var city_name = results[0].address_components[3].long_name;
+          var customrebateUrl = "https://www.google.com/search?q={".concat(city_name, " water efficiency rebate program}&btnI");
+          instance.customrebateUrl = customrebateUrl;
           instance.home_address = results[0].formatted_address; // customCalscapeUrl update
 
           var _url = "https://calscape.org/loc-".concat(lat, ",").concat(lng, "(").concat(instance.home_address, ")/?&poploc=1");

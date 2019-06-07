@@ -4,6 +4,7 @@ var source_of_truth = {
   turf_area: '',
   home_address: '',
   customCalscapeUrl: 'https://calscape.org/loc-/?&poploc=1',
+  customrebateUrl: 'https://www.google.com/search?q=water+efficiency+rebate+programs+near+me',
   pet: '',
   map_is_clickable: true,
   area_is_custom: false,
@@ -24,6 +25,7 @@ new Vue({
       }
     }
   },
+  methods: {},
   computed: {
     turf_area_for_display: function turf_area_for_display() {
       if (this.turf_area == '') {

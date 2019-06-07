@@ -13,6 +13,7 @@
 
   gtag('config', 'UA-127736095-2');
 </script>
+<link rel="icon" href="./assets/favicon.ico" type="image/x-icon" />
 
 
 <!-- Include Bootstrap CSS -->
@@ -39,14 +40,17 @@
           <a class="nav-link" href="#what_is_flip_my_lawn_anchor">What is Flip My Lawn?<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#savings_explorer_anchor">Savings Explorer</a>
+          <a class="nav-link" href="#savings_explorer_anchor">Explore savings</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#next_steps_anchor">Next steps</a>
         </li>
         <!-- <li class="nav-item">
           <a class="nav-link" href="#native_plant_primer_anchor">Native Plant Primer</a>
         </li> -->
       </ul>
-      <a class="navbar-text text-info" href="https://argolabs.org" target="_blank">
-        Powered by ARGO
+      <a class="navbar-text text-info" href="http://californiadatacollaborative.org" target="_blank">
+        California Data Collaborative
       </a>
     </div>
   </nav>
@@ -134,7 +138,7 @@
               </div>
             </div>
             <p>Here in California, we can save water (and some money too) by converting our lawns to beautiful California native landscapes. Flip My Lawn was built to provide simple, easy-to-access estimates of these savings for all Californians. <b>Please remember that these are only estimates and may be optimistic.</b> Current imagery is from 2016. For more details about our approach, please take a look at our <a href="https://docs.google.com/document/d/10KD-uFsSv4Bu6RVPKvaiU_0P4ZvcW5R25bFYTtHzuAo/edit?usp=sharing" target="_blank">methodology</a>.</p>
-            <p>Flip My Lawn is a joint effort of the California Data Collaborative and the University of California, Los Angeles. It is funded by an <a href="http://www.bewaterwise.com/innovative-conservation-program.html" target="_blank">Innovative Conservation Program</a> grant and built by <a href="http://www.argolabs.org/" target="_blank">ARGO</a>.</p>
+            <p>Flip My Lawn is a joint effort of the California Data Collaborative and <a href="http://www.argolabs.org/" target="_blank">ARGO</a>, and it is funded by an <a href="http://www.bewaterwise.com/innovative-conservation-program.html" target="_blank">Innovative Conservation Program</a> grant.</p>
           </div>
         </div>
         <div class="row justify-content-center align-items-center">
@@ -248,10 +252,11 @@
 
         </div>
         <div class="mx-auto text-center mt-3 mb-2">
-          Ready to flip your lawn?
+          Curious about flipping that lawn?
           <br>
-          <a class="btn btn-success mt-1" target="_blank" :href="customCalscapeUrl" role="button">Find plants native to your area</a>
-          <a class="btn btn-primary mt-1" target="_blank" href="https://www.qwel.net/map" role="button">Find qualified local landscapers</a>
+          <button v-scroll-to="'#next_steps_anchor'" class="btn btn-primary" type="button" id="button-addon">Learn about next steps</button>
+          <!-- <a class="btn btn-success mt-1" target="_blank" :href="customCalscapeUrl" role="button">Find plants native to your area</a>
+          <a class="btn btn-primary mt-1" target="_blank" href="https://www.qwel.net/map" role="button">Find qualified local landscapers</a> -->
         </div>
         <p class="text-center lead">
           <i>
@@ -311,11 +316,12 @@
 
       </div>
       <div class="mx-auto text-center mt-3 mb-2">
-        Ready to flip your lawn?
+        Curious about flipping that lawn?
         <br>
+        <button v-scroll-to="'#next_steps_anchor'" class="btn btn-primary" type="button" id="button-addon">Learn about next steps</button>
 
-        <a class="btn btn-success mt-1" target="_blank" :href="customCalscapeUrl" role="button">Find plants native to your area</a>
-        <a class="btn btn-primary mt-1" target="_blank" href="https://www.qwel.net/map" role="button">Let's Find a Landscaper</a>
+        <!-- <a class="btn btn-success mt-1" target="_blank" :href="customCalscapeUrl" role="button">Find plants native to your area</a>
+        <a class="btn btn-primary mt-1" target="_blank" href="https://www.qwel.net/map" role="button">Let's Find a Landscaper</a> -->
 
 
       </div>
@@ -326,6 +332,111 @@
         </span>
       </p>
     </div>
+  </section>
+  <div id="next_steps_anchor" class="anchor row bg-white"></div>
+  <section id="next_steps" class="row py-3 bg-white">
+    <div class="col-lg-12">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <h1 class="text-center mt-2">Your next steps</h1>
+          <div class="card-deck mt-4">
+            <div class="card">
+              <!-- <img class="card-img-top" src=".../100px180/" alt="Card image cap"> -->
+              <div class="card-body">
+                <h1 class='text-center text-success'><i class="fas fa-search-dollar"></i></h1>
+                <h4 class="card-title text-center  mb-4">Save Money</h4>
+                <!-- <small> -->
+                <p class="card-text ">
+                  Most water districts offer rebates for turf removal and/or efficient irrigation equipment. Check your local utility's website.
+                </p>
+                <!-- </small> -->
+              </div>
+              <div class="card-footer text-center bg-white border-top-0">
+                <a class="btn btn-sm btn-success btn-block" target="_blank" :href="customrebateUrl" role="button">Find rebates</a>
+              </div>
+            </div>
+
+            <div class="card">
+              <!-- <img class="card-img-top" src=".../100px180/" alt="Card image cap"> -->
+              <div class="card-body">
+                <h1 class='text-center text-success'><i class="fas fa-seedling"></i></h1>
+                <h4 class="card-title text-center mb-4">Choose Plants</h4>
+
+
+                <p class="card-text">
+                  Not all CA native plants are native to all of CA. Find plants native to your area for your garden.
+                </p>
+              </div>
+              <div class="card-footer text-center bg-white border-top-0">
+                <a class="btn btn-sm btn-success btn-block" target="_blank" :href="customCalscapeUrl" role="button">Find plants</a>
+              </div>
+            </div>
+            <div class="card">
+              <!-- <img class="card-img-top" src=".../100px180/" alt="Card image cap"> -->
+              <div class="card-body">
+                <h1 class='text-center text-success'><i class="fas fa-store"></i></h1>
+                <h4 class="card-title text-center mb-4">Locate Nurseries</h4>
+                <!-- <small> -->
+                <p class="card-text ">
+                  Not all nurseries stock native plants. Find local nurseries that do. Even if you don't plan on "Doing It Yourself," being aware local nurseries that stock natives can help inform conversations with a landscape contractor.
+                </p>
+                <!-- </small> -->
+              </div>
+              <div class="card-footer text-center bg-white border-top-0">
+                <a class="btn btn-sm btn-success btn-block" target="_blank" href="https://calscape.org/plant_nursery.php" role="button">Find nurseries</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="card-deck mt-4">
+            <div class="card">
+              <div class="card-body">
+                <h1 class='text-center text-primary'><i class="fas fa-pencil-ruler"></i></h1>
+                <h4 class="card-title text-center mb-4">Contact Qualified Contractors</h4>
+                <p class="card-text">
+                  Now that you have done some research, if you don't plan on landscaping yourself, the final step in flipping your lawn is to reach out to a landscape contractor. Below you can find links to help you find local landscapers that have been certified to install and maintain water-efficient landscapes.
+                </p>
+
+                <div class="row">
+                  <div class="col">
+                    <h6 class="card-title text-center">CLCA Certified</h6>
+                    <p class="card-text ">
+                    CLCA certified landscape professionals must pass a written test, complete an irrigation audit, and demonstrate proficiency on landscape jobs for one year before becoming fully certified.
+                    </p>
+                  </div>
+                  <div class="col">
+                    <h6 class="card-title text-center">QWEL Certified</h6>
+                    <p class="card-text ">
+                      QWEL certified landscape professionals must pass a written test, complete an irrigation audit, and complete 20 hours of classroom learning covering irrigation systems, landscape design and water budgeting before becoming fully certified.
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer text-center bg-white border-top-0">
+                <div class="row">
+                  <div class="col">
+                    <a class="btn btn-sm btn-primary btn-block" target="_blank" href="http://member-clca.org/max/4DCGI/directory/contractor/index.html" role="button">Find a CLCA certified landscaper</a>
+                  </div>
+                  <div class="col">
+                    <a class="btn btn-sm btn-primary btn-block" target="_blank" href="https://www.qwel.net/map" role="button">Find a QWEL certified landscaper</a>
+
+                  </div>
+
+                </div>
+                <!-- <div class="btn-group" role="group" aria-label=""> -->
+
+
+              <!-- </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
   </section>
 
   <!-- <div id="native_plant_primer_anchor" class="anchor row bg-white"></div>
