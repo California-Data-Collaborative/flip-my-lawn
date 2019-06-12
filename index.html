@@ -16,6 +16,7 @@
 <link rel="icon" href="./assets/favicon.ico" type="image/x-icon" />
 
 
+
 <!-- Include Bootstrap CSS -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <!-- Include Leaflet CSS-->
@@ -38,13 +39,13 @@
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link" href="#what_is_flip_my_lawn_anchor">What is Flip My Lawn?<span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="#what_is_flip_my_lawn_anchor">How Flip My Lawn works<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#savings_explorer_anchor">Explore savings</a>
+          <a class="nav-link" href="#savings_explorer_anchor">Potential benefits</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#next_steps_anchor">Next steps</a>
+          <a class="nav-link" href="#next_steps_anchor">Your next steps</a>
         </li>
         <!-- <li class="nav-item">
           <a class="nav-link" href="#native_plant_primer_anchor">Native Plant Primer</a>
@@ -57,13 +58,13 @@
   </nav>
 
   <div id='app' class="container-fluid bg-light">
-    <div id="what_is_flip_my_lawn_anchor" class="anchor row"></div>
+
     <section id="what_is_flip_my_lawn" class="row">
       <div id='hero' class="col-lg-12" style="background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(assets/water-wise-plants.jpg);">
         <div class="row h-100 justify-content-center align-items-center">
           <div class="col-lg-12 text-center text-white">
-            <h1 class="display-4 d-none d-lg-block">Find out how much you could save with California native plants.</h1>
-            <h1 class="lead d-lg-none">Find out how much you could save with California native plants.</h1>
+            <h1 class="display-4 d-none d-lg-block">Find out what you could save<br>with California native plants.</h1>
+            <h1 class="lead d-lg-none">Find out what you could save<br>with California native plants.</h1>
             <div class="row justify-content-center">
               <div class="input-group input-group-lg mt-4 hide-below-lg col-md-6 col-lg-8">
                 <input v-model='home_address' type="text" ref='autocomplete0' class="form-control" placeholder="Enter your home address" aria-label="Enter your home address" aria-describedby="button-addon">
@@ -85,6 +86,7 @@
         </div>
       </div>
       <div class="col-lg-12">
+          <div id="what_is_flip_my_lawn_anchor" class="anchor row"></div>
         <div class="row justify-content-center my-5">
           <div class="col-lg-10">
             <h1 class="text-center mb-4">How Flip My Lawn works</h1>
@@ -163,13 +165,13 @@
                 </div>
               </div>
             </div>
-            <p>Here in California, we can save water, energy, (and some money too) by converting our lawns to beautiful California native landscapes. Flip My Lawn was built to help streamline this conversion process. Here you will find estimates of potential savings and customized resources for next steps. <b>Please remember that the savings quoted are only estimates and may be optimistic.</b> Current imagery is from 2016. For more details about our approach, please take a look at our <a href="https://docs.google.com/document/d/10KD-uFsSv4Bu6RVPKvaiU_0P4ZvcW5R25bFYTtHzuAo/edit?usp=sharing" target="_blank">methodology</a>.</p>
+            <p>Here in California, we can save water, energy, (and some money too) by converting our lawns to beautiful California native landscapes. Flip My Lawn was built to help streamline this conversion process. Here you will find estimates of potential benefits and customized resources for next steps. <b>Please remember that the numbers quoted are only estimates and may be optimistic.</b> Current imagery is from 2016. For more details about our approach, please take a look at our <a href="https://docs.google.com/document/d/10KD-uFsSv4Bu6RVPKvaiU_0P4ZvcW5R25bFYTtHzuAo/edit?usp=sharing" target="_blank">methodology</a>.</p>
             <p>Flip My Lawn is a joint effort of the California Data Collaborative and <a href="http://www.argolabs.org/" target="_blank">ARGO</a>, and it is funded by an <a href="http://www.bewaterwise.com/innovative-conservation-program.html" target="_blank">Innovative Conservation Program</a> grant.</p>
           </div>
         </div>
         <div class="row justify-content-center align-items-center">
           <div class="col-md-6 col-lg-6 text-center d-none d-md-block">
-            <h4>View your personalized savings.</h4>
+            <h4>View your personalized benefits.</h4>
             <div class="input-group input-group-sm mt-3">
               <input v-model='home_address' type="text" ref='autocomplete2' class="form-control" placeholder="Enter your home address" aria-label="Enter your home address" aria-describedby="button-addon">
               <div class="input-group-append">
