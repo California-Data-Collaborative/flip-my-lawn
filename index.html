@@ -39,13 +39,13 @@
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link" href="#what_is_flip_my_lawn_anchor">How Flip My Lawn works<span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="#how_flip_my_lawn_works">How Flip My Lawn works<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#savings_explorer_anchor">Potential benefits</a>
+          <a class="nav-link" href="#potential_benefits">Potential benefits</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#next_steps_anchor">Your next steps</a>
+          <a class="nav-link" href="#your_next_steps">Your next steps</a>
         </li>
         <!-- <li class="nav-item">
           <a class="nav-link" href="#native_plant_primer_anchor">Native Plant Primer</a>
@@ -59,7 +59,7 @@
 
   <div id='app' class="container-fluid bg-light">
 
-    <section id="what_is_flip_my_lawn" class="row">
+    <section id="how_flip_my_lawn_works_section" class="row">
       <div id='hero' class="col-lg-12" style="background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(assets/water-wise-plants.jpg);">
         <div class="row h-100 justify-content-center align-items-center">
           <div class="col-lg-12 text-center text-white">
@@ -69,13 +69,13 @@
               <div class="input-group input-group-lg mt-4 hide-below-lg col-md-6 col-lg-8">
                 <input v-model='home_address' type="text" ref='autocomplete0' class="form-control" placeholder="Enter your home address" aria-label="Enter your home address" aria-describedby="button-addon">
                 <div class="input-group-append">
-                  <button v-scroll-to="'#savings_explorer_anchor'" class="btn btn-secondary" type="button" id="button-addon">See Estimates</button>
+                  <button v-scroll-to="'#potential_benefits'" class="btn btn-secondary" type="button" id="button-addon">See Estimates</button>
                 </div>
               </div>
               <div class="input-group input-group-sm mt-2 d-lg-none col-11 col-sm-8 col-md-6 col-lg-6">
                 <input v-model='home_address' type="text" ref='autocomplete1' class="form-control" placeholder="Enter your home address" aria-label="Enter your home address" aria-describedby="button-addon">
                 <div class="input-group-append">
-                  <button v-scroll-to="'#savings_explorer_anchor'" class="btn btn-secondary" type="button" id="button-addon">See Estimates</button>
+                  <button v-scroll-to="'#potential_benefits'" class="btn btn-secondary" type="button" id="button-addon">See Estimates</button>
                 </div>
               </div>
             </div>
@@ -86,7 +86,7 @@
         </div>
       </div>
       <div class="col-lg-12">
-          <div id="what_is_flip_my_lawn_anchor" class="anchor row"></div>
+          <div id="how_flip_my_lawn_works" class="anchor row"></div>
         <div class="row justify-content-center my-5">
           <div class="col-lg-10">
             <h1 class="text-center mb-4">How Flip My Lawn works</h1>
@@ -175,15 +175,15 @@
             <div class="input-group input-group-sm mt-3">
               <input v-model='home_address' type="text" ref='autocomplete2' class="form-control" placeholder="Enter your home address" aria-label="Enter your home address" aria-describedby="button-addon">
               <div class="input-group-append">
-                <button v-scroll-to="'#savings_explorer_anchor'" class="btn btn-secondary" type="button" id="button-addon">See Estimates</button>
+                <button v-scroll-to="'#potential_benefits'" class="btn btn-secondary" type="button" id="button-addon">See Estimates</button>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <div id="savings_explorer_anchor" class="anchor row"></div>
-    <section id="savings_explorer" class="row bg-light">
+    <div id="potential_benefits" class="anchor row"></div>
+    <section id="potential_benefits_section" class="row bg-light">
       <div class="col-md-12 col-lg-6 pt-3">
         <label for="search-addon">
           <!-- <b> -->
@@ -199,7 +199,7 @@
           </div>
           <input v-model='home_address' type="text" ref='autocomplete3' class="form-control" placeholder="Enter your home address" aria-label="Enter your home address">
           <!-- <div class="input-group-append">
-          <button v-scroll-to="'#savings_explorer_anchor'" class="btn btn-secondary" type="button" id="button-addon">See Estimates</button>
+          <button v-scroll-to="'#potential_benefits'" class="btn btn-secondary" type="button" id="button-addon">See Estimates</button>
         </div> -->
       </div>
       <label for="leaf-addon-addon">
@@ -328,7 +328,7 @@
     <div class="mt-4 mb-5 mx-auto text-center d-none d-lg-block">
       <h6>Curious about flipping that lawn?</h6>
       <!-- <br> -->
-      <button v-scroll-to="'#next_steps_anchor'" class="btn btn-primary btn-sm" type="button" id="button-addon">Learn about next steps</button>
+      <button v-scroll-to="'#your_next_steps'" class="btn btn-primary btn-sm" type="button" id="button-addon">Learn about next steps</button>
       <!-- <a class="btn btn-success mt-1" target="_blank" :href="customCalscapeUrl" role="button">Find plants native to your area</a>
       <a class="btn btn-primary mt-1" target="_blank" href="https://www.qwel.net/map" role="button">Find qualified local landscapers</a> -->
     </div>
@@ -391,7 +391,7 @@
       <div class="mx-auto text-center">
         <h6>Curious about flipping that lawn?</h6>
         <!-- <br> -->
-        <button v-scroll-to="'#next_steps_anchor'" class="btn btn-primary btn-sm mt-2 mb-4" type="button" id="button-addon">Learn about next steps</button>
+        <button v-scroll-to="'#your_next_steps'" class="btn btn-primary btn-sm mt-2 mb-4" type="button" id="button-addon">Learn about next steps</button>
         <!-- <a class="btn btn-success mt-1" target="_blank" :href="customCalscapeUrl" role="button">Find plants native to your area</a>
         <a class="btn btn-primary mt-1" target="_blank" href="https://www.qwel.net/map" role="button">Find qualified local landscapers</a> -->
       </div>
@@ -402,8 +402,8 @@
       </p> -->
     </div>
   </section>
-  <div id="next_steps_anchor" class="anchor row bg-white"></div>
-  <section id="next_steps" class="row bg-white">
+  <div id="your_next_steps" class="anchor row bg-white"></div>
+  <section id="your_next_steps_section" class="row bg-white">
     <div class="col-lg-12">
         <h1 class="text-center mt-5">Your next steps</h1>
       <div class="row justify-content-center mt-4">
