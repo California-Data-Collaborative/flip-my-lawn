@@ -62,27 +62,21 @@
       <div id='hero' class="col-lg-12" style="background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(assets/water-wise-plants.jpg);">
         <div class="row h-100 justify-content-center align-items-center">
           <div class="col-lg-12 text-center text-white">
-
             <h1 class="display-4 d-none d-lg-block">Find out how much you could save with California native plants.</h1>
             <h1 class="lead d-lg-none">Find out how much you could save with California native plants.</h1>
-
             <div class="row justify-content-center">
               <div class="input-group input-group-lg mt-4 hide-below-lg col-md-6 col-lg-8">
                 <input v-model='home_address' type="text" ref='autocomplete0' class="form-control" placeholder="Enter your home address" aria-label="Enter your home address" aria-describedby="button-addon">
                 <div class="input-group-append">
                   <button v-scroll-to="'#savings_explorer_anchor'" class="btn btn-secondary" type="button" id="button-addon">See Estimates</button>
                 </div>
-
               </div>
-
               <div class="input-group input-group-sm mt-2 d-lg-none col-11 col-sm-8 col-md-6 col-lg-6">
                 <input v-model='home_address' type="text" ref='autocomplete1' class="form-control" placeholder="Enter your home address" aria-label="Enter your home address" aria-describedby="button-addon">
                 <div class="input-group-append">
                   <button v-scroll-to="'#savings_explorer_anchor'" class="btn btn-secondary" type="button" id="button-addon">See Estimates</button>
                 </div>
-
               </div>
-
             </div>
             <!-- <div class='mt-2'>
               <i>e.g., 10236 Charing Cross Rd, Los Angeles, CA 90024, USA </i>
@@ -90,7 +84,6 @@
           </div>
         </div>
       </div>
-
       <div class="col-lg-12">
         <div class="row justify-content-center my-5">
           <div class="col-lg-10">
@@ -103,7 +96,6 @@
                     <h1 class='text-center col-3'><i class="fas fa-search-location"></i></h1>
                     <h1 class='text-center col-3'><svg class='polygon' style="background-image: url(assets/polygon.svg);"></svg></h1>
                   </div> -->
-
                   <h4 class="card-title text-center mb-4">1. Define your project</h4>
                   <p class="card-text">
                     Search for your home to view estimates of the total square footage of lawn available for conversion using aerial imagery.
@@ -117,10 +109,8 @@
                       <small class="col-3"><i class="fas fa-search-location"></i></small>
                       <small class="col-3"><svg class='polygon' style="background-image: url(assets/polygon.svg);"></svg></small>
                   </div>
-
                 </div>
               </div>
-
               <div class="card">
                 <img class="card-img-top" src="./assets/view_potential_benefits.png" alt="" title="By Brewbooks - Own work, CC BY-SA 2.0, https://creativecommons.org/licenses/by-sa/2.0/deed.en">
                 <div class="card-body">
@@ -139,7 +129,6 @@
                 </div>
                 <div class="card-footer text-center">
                   <div class="row justify-content-center">
-
                     <small class="col-3"><i class="fas fa-tint"></i></small>
                     <small class="col-3"><i class="fas fa-cloud"></i></small>
                     <small class="col-3"><i class="fas fa-hand-holding-usd"></i></small>
@@ -163,10 +152,8 @@
                   <p class="card-text">
                     These resources will help you save money and flip your lawn with confidence.
                   </p>
-
                 </div>
                 <div class="card-footer text-center">
-
                   <div class="row">
                     <small class="col-3"><i class="fas fa-search-dollar"></i></small>
                     <small class="col-3"><i class="fas fa-seedling"></i></small>
@@ -192,9 +179,7 @@
           </div>
         </div>
       </div>
-
     </section>
-
     <div id="savings_explorer_anchor" class="anchor row"></div>
     <section id="savings_explorer" class="row bg-light">
       <div class="col-md-12 col-lg-6 pt-3">
@@ -215,7 +200,6 @@
           <button v-scroll-to="'#savings_explorer_anchor'" class="btn btn-secondary" type="button" id="button-addon">See Estimates</button>
         </div> -->
       </div>
-
       <label for="leaf-addon-addon">
         <!-- <b> -->
         Turf Area For Conversion
@@ -281,9 +265,12 @@
           </h2>
           <div class="col-10">
             <p>
-              <h5>{{carbon_savings_for_display}} pounds of carbon saved per year</h5>
+              <h5><span id='popover-tree'>{{carbon_savings_for_display}} pounds of carbon saved per year&nbsp</span></h5>
               <small><i>Based on estimates of energy consumption embedded in the operation of urban water infrastructure systems</i></small>
             </p>
+            <b-popover target="popover-tree" triggers="hover" placement="right">
+              <span v-html='trees_grown_for_display'></span>
+            </b-popover>
           </div>
         </div>
         <div class="row">
@@ -295,14 +282,11 @@
               <h5>${{dollar_savings_for_display}} in savings over 20 years</h5>
               <small><i>Based on cost estimates of water, installation (considering rebates), and yard maintenance</i></small>
             </p>
-
           </div>
         </div>
         <!-- <hr> -->
         <!-- <h5 class='text-center mb-3'>Broader Environmental Impact</h5>
         <div class="row text-center align-items-center">
-
-
           <div class="col-md-5">
             <h6>Potential pounds of carbon saved per year</h6>
             <p>{{carbon_savings_for_display}}</p>
@@ -314,9 +298,7 @@
             <h6>Tree seedlings grown for 10 years per year</h6>
             <p>{{trees_grown_for_display}}</p>
           </div>
-
         </div> -->
-
       </div>
     </div>
 
@@ -387,14 +369,11 @@
             <h5>${{dollar_savings_for_display}} in savings over 20 years</h5>
             <small><i>Based on cost estimates of water, installation (considering rebates), and yard maintenance</i></small>
           </p>
-
         </div>
       </div>
       <hr>
       <!-- <h5 class='text-center mb-3'>Broader Environmental Impact</h5>
       <div class="row text-center align-items-center">
-
-
         <div class="col-md-5">
           <h6>Potential pounds of carbon saved per year</h6>
           <p>{{carbon_savings_for_display}}</p>
@@ -406,7 +385,6 @@
           <h6>Tree seedlings grown for 10 years per year</h6>
           <p>{{trees_grown_for_display}}</p>
         </div>
-
       </div> -->
       <div class="mx-auto text-center">
         <h6>Curious about flipping that lawn?</h6>
@@ -428,7 +406,6 @@
         <h1 class="text-center mt-5">Your next steps</h1>
       <div class="row justify-content-center mt-4">
         <div class="col-lg-10">
-
           <div class="card-deck mt-4">
             <div class="card">
               <!-- <img class="card-img-top" src=".../100px180/" alt="Card image cap"> -->
@@ -436,7 +413,7 @@
                 <h1 class='text-center text-success'><i class="fas fa-search-dollar"></i></h1>
                 <h4 class="card-title text-center  mb-4">Save Money</h4>
                 <!-- <small> -->
-                <p class="card-text ">
+                <p class="card-text">
                   Most water districts offer rebates for turf removal and/or efficient irrigation equipment. Check your local utility's website.
                 </p>
                 <!-- </small> -->
@@ -445,14 +422,11 @@
                 <a class="btn btn-sm btn-success btn-block" target="_blank" :href="customrebateUrl" role="button">Find rebates</a>
               </div>
             </div>
-
             <div class="card">
               <!-- <img class="card-img-top" src=".../100px180/" alt="Card image cap"> -->
               <div class="card-body">
                 <h1 class='text-center text-success'><i class="fas fa-seedling"></i></h1>
                 <h4 class="card-title text-center mb-4">Choose Plants</h4>
-
-
                 <p class="card-text">
                   Not all CA native plants are native to all of CA. Find plants native to your area for your garden.
                 </p>
@@ -489,7 +463,6 @@
                 <p class="card-text">
                   Now that you have done some research, if you don't plan on landscaping yourself, the final step in flipping your lawn is to reach out to a landscape contractor. Below you can find links to help you find local landscapers that have been certified to install and maintain water-efficient landscapes.
                 </p>
-
                 <div class="row">
                   <div class="col-lg-6">
                     <h6 class="card-title text-center">CLCA Certified</h6>
@@ -519,15 +492,12 @@
                   </div>
                   <div class="col-lg-6">
                     <a class="btn btn-sm btn-primary btn-block" target="_blank" href="https://www.qwel.net/map" role="button">Find a QWEL certified landscaper</a>
-
                   </div>
-
                 </div>
               </div>
             </div>
           </div>
         </div>
-
       </div>
     </div>
 
@@ -576,7 +546,7 @@
     </div>
   </div>
 </section> -->
-<footer class='text-center py-3'>
+<footer  class='text-center py-3'>
   <small class=''><i>The creators assumes no responsibility or liability for any errors or omissions in the content of this site.<br>The information contained in this site is provided on an “as is” basis with no guarantees of completeness, accuracy, usefulness or timeliness.</i></small>
 </footer>
 </div>
@@ -600,16 +570,17 @@ async defer></script>
 <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
 <!-- production version, optimized for size and speed -->
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/vue-scrollto"></script>
 
 
 <!-- custom JavaScript -->
-<script type="text/javascript" src="js/search.js"></script>
+<!-- <script type="text/javascript" src="js/search.js"></script>
 <script type="text/javascript" src="js/map.js"></script>
-<script type="text/javascript" src="js/script.js"></script>
-<!-- <script type="text/javascript" src="js_dev/search.js"></script>
+<script type="text/javascript" src="js/script.js"></script> -->
+<script type="text/javascript" src="js_dev/search.js"></script>
 <script type="text/javascript" src="js_dev/map.js"></script>
-<script type="text/javascript" src="js_dev/script.js"></script> -->
+<script type="text/javascript" src="js_dev/script.js"></script>
 </body>
 </html>
