@@ -22,7 +22,8 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.css"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.3/leaflet.draw.css" />
 <!-- Include Font Awesome CSS-->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+<script src="https://kit.fontawesome.com/25f1d06ace.js"></script>
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"> -->
 <!-- Include custom CSS  -->
 <link rel="stylesheet" href="css/style.css">
 
@@ -30,7 +31,7 @@
 </head>
 <body data-spy="scroll" data-target="#nav" class="bg-dark">
   <nav id='nav' class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Flip My Lawn | v1.1 beta 2</a>
+    <a class="navbar-brand" href="#">Flip My Lawn</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -93,51 +94,89 @@
       <div class="col-lg-12">
         <div class="row justify-content-center my-5">
           <div class="col-lg-10">
-            <h1 class="text-center mb-4">What is Flip My Lawn?</h1>
+            <h1 class="text-center mb-4">How Flip My Lawn works</h1>
             <div class="card-deck my-5">
               <div class="card">
-                <!-- <img class="card-img-top" src=".../100px180/" alt="Card image cap"> -->
+                <img class="card-img-top" src="./assets/define_you_project.png" alt="">
                 <div class="card-body">
-                  <h3 class="card-title text-center">1. Search for your home</h3>
-                  <p class="card-text lead">
-                    We estimate the total square footage of lawn available for conversion using publicly available imagery from airplanes.
+                  <!-- <div class="row justify-content-center">
+                    <h1 class='text-center col-3'><i class="fas fa-search-location"></i></h1>
+                    <h1 class='text-center col-3'><svg class='polygon' style="background-image: url(assets/polygon.svg);"></svg></h1>
+                  </div> -->
+
+                  <h4 class="card-title text-center mb-4">1. Define your project</h4>
+                  <p class="card-text">
+                    Search for your home to view estimates of the total square footage of lawn available for conversion using aerial imagery.
+                  </p>
+                  <p class="card-text">
+                     You can fine tune the estimates by outlining the specific areas you are considering converting.
                   </p>
                 </div>
                 <div class="card-footer text-center">
-                  <small class=""><i class="fas fa-search-location"></i></small>
+                  <div class="row justify-content-center">
+                      <small class="col-3"><i class="fas fa-search-location"></i></small>
+                      <small class="col-3"><svg class='polygon' style="background-image: url(assets/polygon.svg);"></svg></small>
+                  </div>
+
                 </div>
               </div>
+
               <div class="card">
-                <!-- <img class="card-img-top" src=".../100px180/" alt="Card image cap"> -->
+                <img class="card-img-top" src="./assets/view_potential_benefits.png" alt="" title="By Brewbooks - Own work, CC BY-SA 2.0, https://creativecommons.org/licenses/by-sa/2.0/deed.en">
                 <div class="card-body">
-                  <h3 class="card-title text-center">2. Personalize your analysis</h3>
-                  <p class="card-text lead">
-                    Fine tune the estimates by outlining the specific areas you are considering converting.
+                  <!-- <div class="row justify-content-center">
+                    <h1 class='text-center col-3'><i class="fas fa-tint"></i></h1>
+                    <h1 class='text-center col-3'><i class="fas fa-cloud"></i></h1>
+                    <h1 class='text-center col-3'><i class="fas fa-hand-holding-usd"></i></h1>
+                  </div> -->
+                  <h4 class="card-title text-center mb-4">2. View potential benefits</h4>
+                  <p class="card-text">
+                    Using lawn area estimates and measurments of local environmental conditions, we calculate the potential water, carbon, and dollar savings.
+                  </p>
+                  <p class="card-text">
+                     Converting your lawn to natives benefits both you and the environment.
                   </p>
                 </div>
                 <div class="card-footer text-center">
-                  <small class=""><svg class='polygon' style="background-image: url(assets/polygon.svg);"></svg></small>
-                </div>
-              </div>
-              <div class="card">
-                <!-- <img class="card-img-top" src=".../100px180/" alt="Card image cap"> -->
-                <div class="card-body">
-                  <h3 class="card-title text-center">3. View potential savings</h3>
-                  <p class="card-text lead">
-                    We calculate potential savings using lawn area estimates and measurments of local environmental conditions.
-                  </p>
-                </div>
-                <div class="card-footer text-center">
-                  <div class="row">
+                  <div class="row justify-content-center">
+
                     <small class="col-3"><i class="fas fa-tint"></i></small>
-                    <small class="col-3"><i class="fas fa-hand-holding-usd"></i></small>
                     <small class="col-3"><i class="fas fa-cloud"></i></small>
-                    <small class="col-3"><i class="fas fa-tree"></i></small>
+                    <small class="col-3"><i class="fas fa-hand-holding-usd"></i></small>
+                    <!-- <small class="col-3"><i class="fas fa-tree"></i></small> -->
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <img class="card-img-top" src="./assets/flip_your_lawn.png" alt="" title="By Gumsaint - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=27407505">
+                <div class="card-body">
+                  <!-- <div class="row justify-content-center">
+                    <h1 class='text-center col-3'><i class="fas fa-search-dollar"></i></h1>
+                    <h1 class='text-center col-3'><i class="fas fa-seedling"></i></h1>
+                    <h1 class='text-center col-3'><i class="fas fa-store"></i></h1>
+                    <h1 class='text-center col-3'><i class="fas fa-pencil-ruler"></i></h1>
+                  </div> -->
+                  <h4 class="card-title text-center mb-4">3. Flip your lawn</h4>
+                  <p class="card-text">
+                    After viewing the potential benefits, you can search for rebate opportunities, native plants, local nurseries, and vetted landscape contractors.
+                  </p>
+                  <p class="card-text">
+                    These resources will help you save money and flip your lawn with confidence.
+                  </p>
+
+                </div>
+                <div class="card-footer text-center">
+
+                  <div class="row">
+                    <small class="col-3"><i class="fas fa-search-dollar"></i></small>
+                    <small class="col-3"><i class="fas fa-seedling"></i></small>
+                    <small class="col-3"><i class="fas fa-store"></i></small>
+                    <small class="col-3"><i class="fas fa-pencil-ruler"></i></small>
                   </div>
                 </div>
               </div>
             </div>
-            <p>Here in California, we can save water (and some money too) by converting our lawns to beautiful California native landscapes. Flip My Lawn was built to provide simple, easy-to-access estimates of these savings for all Californians. <b>Please remember that these are only estimates and may be optimistic.</b> Current imagery is from 2016. For more details about our approach, please take a look at our <a href="https://docs.google.com/document/d/10KD-uFsSv4Bu6RVPKvaiU_0P4ZvcW5R25bFYTtHzuAo/edit?usp=sharing" target="_blank">methodology</a>.</p>
+            <p>Here in California, we can save water, energy, (and some money too) by converting our lawns to beautiful California native landscapes. Flip My Lawn was built to help streamline this conversion process. Here you will find estimates of potential savings and customized resources for next steps. <b>Please remember that the savings quoted are only estimates and may be optimistic.</b> Current imagery is from 2016. For more details about our approach, please take a look at our <a href="https://docs.google.com/document/d/10KD-uFsSv4Bu6RVPKvaiU_0P4ZvcW5R25bFYTtHzuAo/edit?usp=sharing" target="_blank">methodology</a>.</p>
             <p>Flip My Lawn is a joint effort of the California Data Collaborative and <a href="http://www.argolabs.org/" target="_blank">ARGO</a>, and it is funded by an <a href="http://www.bewaterwise.com/innovative-conservation-program.html" target="_blank">Innovative Conservation Program</a> grant.</p>
           </div>
         </div>
@@ -225,16 +264,42 @@
         <h5>No data for this yard...</h5>
       </div>
       <div v-if="data_available && turf_area!=='No turf area data'" class="d-none d-lg-block">
-        <p>
-          <h4>{{water_savings_for_display}}k gallons of water saved per year</h4>
-          <i>Based on estimates of current turf area for conversion and local environmental conditions</i>
-        </p>
-        <p>
-          <h4>${{dollar_savings_for_display}} in savings over 20 years</h4>
-          <i>Based on cost estimates of water, installation (considering rebates), and yard maintenance</i>
-        </p>
-        <hr>
-        <h5 class='text-center mb-3'>Broader Environmental Impact</h5>
+        <div class="row">
+            <h2 class="col-2 text-center align-self-center pr-0">
+              <i class="fas fa-tint"></i>
+            </h2>
+          <div class="col-10">
+            <p>
+              <h5>{{water_savings_for_display}}k gallons of water saved per year</h5>
+              <small><i>Based on estimates of current turf area for conversion and local environmental conditions</i></small>
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <h2 class="col-2 text-center align-self-center pr-0">
+            <i class="fas fa-cloud"></i>
+          </h2>
+          <div class="col-10">
+            <p>
+              <h5>{{carbon_savings_for_display}} pounds of carbon saved per year</h5>
+              <small><i>Based on estimates of energy consumption embedded in the operation of urban water infrastructure systems</i></small>
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <h2 class="col-2 text-center align-self-center pr-0">
+            <i class="fas fa-hand-holding-usd"></i>
+          </h2>
+          <div class="col-10">
+            <p>
+              <h5>${{dollar_savings_for_display}} in savings over 20 years</h5>
+              <small><i>Based on cost estimates of water, installation (considering rebates), and yard maintenance</i></small>
+            </p>
+
+          </div>
+        </div>
+        <!-- <hr> -->
+        <!-- <h5 class='text-center mb-3'>Broader Environmental Impact</h5>
         <div class="row text-center align-items-center">
 
 
@@ -250,19 +315,8 @@
             <p>{{trees_grown_for_display}}</p>
           </div>
 
-        </div>
-        <div class="mx-auto text-center mt-3 mb-2">
-          Curious about flipping that lawn?
-          <br>
-          <button v-scroll-to="'#next_steps_anchor'" class="btn btn-primary" type="button" id="button-addon">Learn about next steps</button>
-          <!-- <a class="btn btn-success mt-1" target="_blank" :href="customCalscapeUrl" role="button">Find plants native to your area</a>
-          <a class="btn btn-primary mt-1" target="_blank" href="https://www.qwel.net/map" role="button">Find qualified local landscapers</a> -->
-        </div>
-        <p class="text-center lead">
-          <i>
-            Please remember that these are only <a href="https://docs.google.com/document/d/10KD-uFsSv4Bu6RVPKvaiU_0P4ZvcW5R25bFYTtHzuAo/edit">estimates</a> and may be optimistic.
-          </i>
-        </p>
+        </div> -->
+
       </div>
     </div>
 
@@ -287,18 +341,57 @@
         </div>
       </div>
     </div>
+    <div class="mt-4 mb-5 mx-auto text-center d-none d-lg-block">
+      <h6>Curious about flipping that lawn?</h6>
+      <!-- <br> -->
+      <button v-scroll-to="'#next_steps_anchor'" class="btn btn-primary btn-sm" type="button" id="button-addon">Learn about next steps</button>
+      <!-- <a class="btn btn-success mt-1" target="_blank" :href="customCalscapeUrl" role="button">Find plants native to your area</a>
+      <a class="btn btn-primary mt-1" target="_blank" href="https://www.qwel.net/map" role="button">Find qualified local landscapers</a> -->
+    </div>
+
+    <!-- <p class="text-center lead">
+      <i>
+        Please remember that these are only <a href="https://docs.google.com/document/d/10KD-uFsSv4Bu6RVPKvaiU_0P4ZvcW5R25bFYTtHzuAo/edit">estimates</a> and may be optimistic.
+      </i>
+    </p> -->
 
     <div v-if="data_available && turf_area!=='No turf area data'" class="d-lg-none col-md-12">
-      <p>
-        <h4>{{water_savings_for_display}}k gallons of water saved per year</h4>
-        <i>Based on estimates of current turf area for conversion and local environmental conditions</i>
-      </p>
-      <p>
-        <h4>${{dollar_savings_for_display}} in savings over 20 years</h4>
-        <i>Based on cost estimates of water, installation (considering rebates), and yard maintenance</i>
-      </p>
+      <div class="row">
+          <h2 class="col-2 text-center align-self-center pr-0">
+            <i class="fas fa-tint"></i>
+          </h2>
+        <div class="col-10">
+          <p>
+            <h5>{{water_savings_for_display}}k gallons of water saved per year</h5>
+            <small><i>Based on estimates of current turf area for conversion and local environmental conditions</i></small>
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <h2 class="col-2 text-center align-self-center pr-0">
+          <i class="fas fa-cloud"></i>
+        </h2>
+        <div class="col-10">
+          <p>
+            <h5>{{carbon_savings_for_display}} pounds of carbon saved per year</h5>
+            <small><i>Based on estimates of energy consumption embedded in the operation of urban water infrastructure systems</i></small>
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <h2 class="col-2 text-center align-self-center pr-0">
+          <i class="fas fa-hand-holding-usd"></i>
+        </h2>
+        <div class="col-10">
+          <p>
+            <h5>${{dollar_savings_for_display}} in savings over 20 years</h5>
+            <small><i>Based on cost estimates of water, installation (considering rebates), and yard maintenance</i></small>
+          </p>
+
+        </div>
+      </div>
       <hr>
-      <h5 class='text-center mb-3'>Broader Environmental Impact</h5>
+      <!-- <h5 class='text-center mb-3'>Broader Environmental Impact</h5>
       <div class="row text-center align-items-center">
 
 
@@ -314,31 +407,28 @@
           <p>{{trees_grown_for_display}}</p>
         </div>
 
-      </div>
-      <div class="mx-auto text-center mt-3 mb-2">
-        Curious about flipping that lawn?
-        <br>
-        <button v-scroll-to="'#next_steps_anchor'" class="btn btn-primary" type="button" id="button-addon">Learn about next steps</button>
-
+      </div> -->
+      <div class="mx-auto text-center">
+        <h6>Curious about flipping that lawn?</h6>
+        <!-- <br> -->
+        <button v-scroll-to="'#next_steps_anchor'" class="btn btn-primary btn-sm mt-2 mb-4" type="button" id="button-addon">Learn about next steps</button>
         <!-- <a class="btn btn-success mt-1" target="_blank" :href="customCalscapeUrl" role="button">Find plants native to your area</a>
-        <a class="btn btn-primary mt-1" target="_blank" href="https://www.qwel.net/map" role="button">Let's Find a Landscaper</a> -->
-
-
+        <a class="btn btn-primary mt-1" target="_blank" href="https://www.qwel.net/map" role="button">Find qualified local landscapers</a> -->
       </div>
-
-      <p class="text-center lead">
-        <span>
+      <!-- <p class="text-center lead">
+        <i>
           Please remember that these are only <a href="https://docs.google.com/document/d/10KD-uFsSv4Bu6RVPKvaiU_0P4ZvcW5R25bFYTtHzuAo/edit">estimates</a> and may be optimistic.
-        </span>
-      </p>
+        </i>
+      </p> -->
     </div>
   </section>
   <div id="next_steps_anchor" class="anchor row bg-white"></div>
-  <section id="next_steps" class="row py-3 bg-white">
+  <section id="next_steps" class="row bg-white">
     <div class="col-lg-12">
-      <div class="row justify-content-center">
+        <h1 class="text-center mt-5">Your next steps</h1>
+      <div class="row justify-content-center mt-4">
         <div class="col-lg-10">
-          <h1 class="text-center mt-2">Your next steps</h1>
+
           <div class="card-deck mt-4">
             <div class="card">
               <!-- <img class="card-img-top" src=".../100px180/" alt="Card image cap"> -->
@@ -389,9 +479,9 @@
           </div>
         </div>
       </div>
-      <div class="row justify-content-center">
+      <div class="row justify-content-center mb-5">
         <div class="col-lg-10">
-          <div class="card-deck mt-4">
+          <div class="card-deck mt-4 mb-5">
             <div class="card">
               <div class="card-body">
                 <h1 class='text-center text-primary'><i class="fas fa-pencil-ruler"></i></h1>
@@ -401,34 +491,38 @@
                 </p>
 
                 <div class="row">
-                  <div class="col">
+                  <div class="col-lg-6">
                     <h6 class="card-title text-center">CLCA Certified</h6>
                     <p class="card-text ">
                     CLCA certified landscape professionals must pass a written test, complete an irrigation audit, and demonstrate proficiency on landscape jobs for one year before becoming fully certified.
                     </p>
+                    <div class="text-center bg-white border-top-0 d-lg-none">
+                      <a class="btn btn-sm btn-primary btn-block" target="_blank" href="http://member-clca.org/max/4DCGI/directory/contractor/index.html" role="button">Find a CLCA certified landscaper</a>
+                      <br>
+                    </div>
                   </div>
-                  <div class="col">
+                  <div class="col-lg-6">
                     <h6 class="card-title text-center">QWEL Certified</h6>
                     <p class="card-text ">
                       QWEL certified landscape professionals must pass a written test, complete an irrigation audit, and complete 20 hours of classroom learning covering irrigation systems, landscape design and water budgeting before becoming fully certified.
+                    </p>
+                    <div class="text-center bg-white border-top-0 d-lg-none">
+                      <a class="btn btn-sm btn-primary btn-block" target="_blank" href="https://www.qwel.net/map" role="button">Find a QWEL certified landscaper</a>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="card-footer text-center bg-white border-top-0">
+              <div class="card-footer text-center bg-white border-top-0 d-none d-lg-block">
                 <div class="row">
-                  <div class="col">
+                  <div class="col-lg-6">
                     <a class="btn btn-sm btn-primary btn-block" target="_blank" href="http://member-clca.org/max/4DCGI/directory/contractor/index.html" role="button">Find a CLCA certified landscaper</a>
                   </div>
-                  <div class="col">
+                  <div class="col-lg-6">
                     <a class="btn btn-sm btn-primary btn-block" target="_blank" href="https://www.qwel.net/map" role="button">Find a QWEL certified landscaper</a>
 
                   </div>
 
                 </div>
-                <!-- <div class="btn-group" role="group" aria-label=""> -->
-
-
-              <!-- </div> -->
               </div>
             </div>
           </div>
