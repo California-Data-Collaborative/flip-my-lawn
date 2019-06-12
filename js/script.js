@@ -56,7 +56,7 @@ new Vue({
     },
     trees_grown_for_display: function trees_grown_for_display() {
       var treesGrown = this.carbon_savings * 0.01169444992;
-      return treesGrown.toPrecision(2).toLocaleString();
+      return "<b>".concat(treesGrown.toPrecision(2).toLocaleString(), "</b> tree seedlings grown for 10 years per year!");
     },
     dollar_savings_for_display: function dollar_savings_for_display() {
       var turf_maintenance = 240 * (47.81 / 10890) * this.turf_area; // https://www.lawnstarter.com/CA | https://lawn-care.promatcher.com/cost/los-angeles-ca-lawn-care-costs-prices.aspx
