@@ -172,7 +172,7 @@
                 </div>
               </div>
             </div>
-            <p>Here in California, we can save water, energy, (and some money too) by converting our lawns to beautiful California native landscapes. Flip My Lawn was built to help streamline this conversion process. Here you will find estimates of potential benefits and customized resources for next steps. <b>Please remember that the numbers quoted are only estimates and may be optimistic.</b> Current imagery is from 2016. For more details about our approach, please take a look at our <a href="https://docs.google.com/document/d/10KD-uFsSv4Bu6RVPKvaiU_0P4ZvcW5R25bFYTtHzuAo/edit?usp=sharing" target="_blank">methodology</a>.</p>
+            <p>Here in California, we can save water, energy, (and some money too) by converting our lawns to beautiful California native landscapes. Flip My Lawn was built to help streamline this conversion process. Here you will find estimates of potential benefits and customized resources for next steps. <b>Please remember that the numbers quoted are only estimates and may be optimistic.</b> Default turf estimates are from 2016. For more details about our approach, please take a look at our <a href="https://docs.google.com/document/d/10KD-uFsSv4Bu6RVPKvaiU_0P4ZvcW5R25bFYTtHzuAo/edit?usp=sharing" target="_blank">methodology</a>.</p>
             <p>Flip My Lawn is a joint effort of the California Data Collaborative and <a href="http://www.argolabs.org/" target="_blank">ARGO</a>, and it is funded by an <a href="http://www.bewaterwise.com/innovative-conservation-program.html" target="_blank">Innovative Conservation Program</a> grant.</p>
           </div>
         </div>
@@ -211,7 +211,13 @@
       </div>
       <label for="leaf-addon-addon">
         <!-- <b> -->
-        Turf Area For Conversion
+        Turf Area For Conversion <a id='popover-turf' style="cursor: pointer;" data-toggle="modal" data-target="#instruction_modal" class="fas fa-info-circle text-success lead"></a>
+        <!-- <b-popover target="popover-turf" triggers="hover" placement="right">
+          Flip My Lawn's current default estimates have been derived from 2016 imagery.
+          <br>
+          <br>
+          To fine tune, use the &nbsp<svg class='polygon' style="background-image: url(assets/polygon.svg);"></svg>&nbsp tool on the map and draw polygons around the parts of your lawn you would like to convert.
+        </b-popover> -->
         <!-- </b> -->
       </label>
       <div class="input-group input-group-sm mb-3">
@@ -222,22 +228,30 @@
         <!-- </span> -->
         <!-- </div> -->
         <input v-model='turf_area_for_display' type="text" class="form-control" placeholder="Enter an address above, or click a yard on the map" aria-label="Enter an address above, or click a yard on the map" aria-describedby="button-addon" disabled>
-        <div v-if="data_available" class="input-group-append">
+        <!-- <div v-if="data_available" class="input-group-append">
           <button class="btn btn-success" type="button" id="button-addon" data-toggle="modal" data-target="#instruction_modal">Edit</button>
-        </div>
+        </div> -->
       </div>
       <!-- Modal -->
       <div class="modal fade" id="instruction_modal" tabindex="-1" role="dialog" aria-labelledby="instruction_modal_title" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="instruction_modal_title">Draw polygons around the parts of your lawn you would like to convert</h5>
+            <!-- <div class="modal-header">
+              <h5 class="modal-title" id="instruction_modal_title">Fine tune default turf area estimates</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
-            </div>
+            </div> -->
             <div class="modal-body">
-              <ol class="">
+              <p class=''>
+              Flip My Lawn's current default turf area estimates have been derived from 2016 flyover imagery for each parcel.
+              </p>
+              <p>
+                To use a different turf area for savings calculations, you can use the &nbsp<svg class='polygon' style="background-image: url(assets/polygon.svg);"></svg>&nbsp tool on the map to draw polygons around the parts of your lawn you might convert.
+              </p>
+              <hr>
+              <h2 class='mb-3'>To fine tune turf area estimates:</h2>
+              <ol class="lead">
                 <li class="mb-3 mr-3">Click the &nbsp<svg class='polygon' style="background-image: url(assets/polygon.svg);"></svg>&nbsp on the map to start drawing</li>
                 <li class="mb-3 mr-3">Follow the popup prompts to continue and complete the drawing</li>
                 <li class="mb-3 mr-3">Click the &nbsp<svg class='polygon' style="background-image: url(assets/polygon.svg);"></svg>&nbsp again to draw additional polygons</li>
@@ -451,7 +465,7 @@
                 <h4 class="card-title text-center mb-4">Locate Nurseries</h4>
                 <!-- <small> -->
                 <p class="card-text ">
-                  Not all nurseries stock native plants. Find local nurseries that do. Even if you don't plan on "Doing It Yourself," being aware local nurseries that stock natives can help inform conversations with a landscape contractor.
+                  Not all nurseries stock native plants. Find local nurseries that do. Even if you don't plan on "Doing It Yourself," being aware of local nurseries that stock natives can help inform conversations with a landscape contractor.
                 </p>
                 <!-- </small> -->
               </div>
@@ -472,21 +486,21 @@
                 <p class="card-text">
                   Now that you have done some research, if you don't plan on landscaping yourself, the final step in flipping your lawn is to reach out to a landscape contractor. Below you can find links to help you find local landscapers that have been certified to install and maintain water-efficient landscapes.
                 </p>
-                <div class="row">
+                <div class="row pt-4">
                   <div class="col-lg-6">
-                    <h6 class="card-title text-center">CLCA Certified</h6>
+                    <h6 class="card-title text-center">California Landscape Contractors Association (CLCA)</h6>
                     <p class="card-text ">
-                    CLCA certified landscape professionals must pass a written test, complete an irrigation audit, and demonstrate proficiency on landscape jobs for one year before becoming fully certified.
+                    CLCA is the largest landscape contractors association in California. They offer multiple certification programs to members focused on efficiently managing water as well as installing and maintaining native landscapes. Certified contractors have passed a written test, an irrigation audit and actively managed landscapes at or below specified water budgets. Follow the link below to find contractors near you with certified contractors on staff.
                     </p>
                     <div class="text-center bg-white border-top-0 d-lg-none">
-                      <a class="btn btn-sm btn-primary btn-block" target="_blank" href="http://member-clca.org/max/4DCGI/directory/contractor/index.html" role="button">Find a CLCA certified landscaper</a>
+                      <a class="btn btn-sm btn-primary btn-block" target="_blank" href="http://52.43.235.2/consumer-resources/companies-with-certified-employees/" role="button">Find a CLCA certified landscaper</a>
                       <br>
                     </div>
                   </div>
                   <div class="col-lg-6">
-                    <h6 class="card-title text-center">QWEL Certified</h6>
+                    <h6 class="card-title text-center">Qualified Water Efficient Landscaper (QWEL)</h6>
                     <p class="card-text ">
-                      QWEL certified landscape professionals must pass a written test, complete an irrigation audit, and complete 20 hours of classroom learning covering irrigation systems, landscape design and water budgeting before becoming fully certified.
+                      QWEL is an EPA endorsed certification program in irrigation system audits. Landscape professionals complete 20 hours of education on local water supply, sustainable landscaping, soils, landscape water budgets, irrigation system components and maintenance, irrigation system audits, and scheduling and controller programming. They must then pass a written exam and demonstrate their ability to perform an irrigation system audit.
                     </p>
                     <div class="text-center bg-white border-top-0 d-lg-none">
                       <a class="btn btn-sm btn-primary btn-block" target="_blank" href="https://www.qwel.net/map" role="button">Find a QWEL certified landscaper</a>
@@ -497,7 +511,7 @@
               <div class="card-footer text-center bg-white border-top-0 d-none d-lg-block">
                 <div class="row">
                   <div class="col-lg-6">
-                    <a class="btn btn-sm btn-primary btn-block" target="_blank" href="http://member-clca.org/max/4DCGI/directory/contractor/index.html" role="button">Find a CLCA certified landscaper</a>
+                    <a class="btn btn-sm btn-primary btn-block" target="_blank" href="http://52.43.235.2/consumer-resources/companies-with-certified-employees/" role="button">Find a CLCA certified landscaper</a>
                   </div>
                   <div class="col-lg-6">
                     <a class="btn btn-sm btn-primary btn-block" target="_blank" href="https://www.qwel.net/map" role="button">Find a QWEL certified landscaper</a>
