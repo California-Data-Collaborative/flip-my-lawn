@@ -211,7 +211,10 @@
       </div>
       <label for="leaf-addon-addon">
         <!-- <b> -->
-        Turf Area For Conversion <a id='popover-turf' style="cursor: pointer;" data-toggle="modal" data-target="#instruction_modal" class="fas fa-info-circle text-success lead"></a>
+        Turf Area For Conversion <a id='popover-turf' style="cursor: pointer;" data-toggle="modal" data-target="#instruction_modal" class="fas fa-info-circle text-success lead"></a>&nbsp
+        <span class="bounce_x" v-if="turf_area=='No turf area data'">
+          <i class="fas fa-arrow-left"></i>
+        </span>
         <!-- <b-popover target="popover-turf" triggers="hover" placement="right">
           Flip My Lawn's current default estimates have been derived from 2016 imagery.
           <br>
@@ -244,7 +247,7 @@
             </div> -->
             <div class="modal-body">
               <p class=''>
-              Flip My Lawn's current default turf area estimates have been derived from 2016 flyover imagery for each parcel.
+              Flip My Lawn's current default turf area estimates have been derived from 2016 flyover imagery for each parcel (where available).
               </p>
               <p>
                 To use a different turf area for savings calculations, you can use the &nbsp<svg class='polygon' style="background-image: url(assets/polygon.svg);"></svg>&nbsp tool on the map to draw polygons around the parts of your lawn you might convert.
@@ -264,7 +267,7 @@
           </div>
         </div>
       </div>
-      <div class="bounce" v-bind:class="{'text-center':!data_available, 'd-none':data_available&&turf_area!=='No turf area data', 'float-right':ventura&&data_available}">
+      <div class="bounce_y" v-bind:class="{'text-center':!data_available, 'd-none':data_available||turf_area=='No turf area data'}">
         <h1><i class="fas fa-arrow-up"></i></h1>
       </div>
       <div class="text-center" v-bind:class="{'d-none': data_available||!initialized }">

@@ -64,13 +64,13 @@ new Vue({
       var native_maintenance = turf_maintenance * .68; // https://www.smgov.net/uploadedFiles/Departments/OSE/Categories/Landscape/garden-garden-2013.pdf
 
       var maintenance_savings = turf_maintenance - native_maintenance;
-      var dollarSavings = this.water_savings * 20 * 0.00695187165 + maintenance_savings - (3 - this.$options.rebate) * this.turf_area; // 10 ccf for 52 from water rate survey
+      var dollarSavings = this.water_savings * 20 * 0.00695187165 + maintenance_savings - (5.36 - this.$options.rebate) * this.turf_area; // 10 ccf for 52 from water rate survey
 
       return "".concat((Math.round(dollarSavings / 100) * 100).toLocaleString());
     }
   },
   // static props
-  rebate: 1,
+  rebate: 2.53,
   // setup functions
   beforeCreate: function beforeCreate() {
     window.onbeforeunload = function () {

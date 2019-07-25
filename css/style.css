@@ -30,16 +30,30 @@
   cursor: pointer;
 }
 
-/* The animation code */
-@keyframes bounce {
+/* The up-down animation code */
+@keyframes bounce_y {
    0% {transform: translateY(0);}
    50% {transform: translateY(-10px);}
 }
 
 /* The element to apply the animation to */
-.bounce {
-    animation: bounce 1s infinite;
+.bounce_y {
+    animation: bounce_y 1s infinite;
 }
+
+/* The left-right animation code */
+@keyframes bounce_x {
+   0% {transform: translateX(0);}
+   50% {transform: translateX(-5px);}
+}
+
+/* The element to apply the animation to */
+.bounce_x {
+    animation: bounce_x 1s infinite;
+    display: -moz-inline-stack;
+    display: inline-block;
+}
+
 
 
 @media (max-width: 992px) {
